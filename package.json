@@ -2,9 +2,10 @@
   "name": "ng-face-detection",
   "version": "1.0.0",
   "description": "ng-face-detection",
-  "main": "index.js",
+  "main": "dist/ng-face-detection.js",
   "scripts": {
     "dev": "rollup --watch --config rollup.config.dev.js",
+    "build": "rollup --config rollup.config.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
