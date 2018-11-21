@@ -61,7 +61,7 @@ function FaceDetectionService(
                 $q(resolve => {
                     faceCanvas.toBlob((blob) => {
                         resolve(blob);
-                    });
+                    }, 'image/jpeg');
                 })
             )
         }
