@@ -2,6 +2,7 @@ const resolve = require('rollup-plugin-node-resolve');
 const serve = require('rollup-plugin-serve');
 const commonjs = require('rollup-plugin-commonjs');
 const html = require('rollup-plugin-html');
+const async = require('rollup-plugin-async');
 const copy = require('rollup-plugin-copy');
 const liveReload = require('rollup-plugin-livereload');
 
@@ -18,6 +19,7 @@ module.exports = [
         plugins: [
             resolve(),
             commonjs(),
+            async(),
             html(),
             serve('dist-dev'),
             liveReload('dist-dev')

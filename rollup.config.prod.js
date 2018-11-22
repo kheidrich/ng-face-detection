@@ -14,6 +14,7 @@ module.exports = {
     plugins: [
         resolve(),
         commonjs(),
+        async(),
         html(),
         externalGlobals({
             angular: "angular"
