@@ -51,12 +51,7 @@ function FaceDetectionService(
 
             faceCanvas.width = face.width;
             faceCanvas.height = face.height;
-            faceCanvas.getContext('2d')
-                .putImageData(
-                    context.getImageData(face.x, face.y, face.width, face.height),
-                    face.width,
-                    face.height
-                );
+            faceCanvas.getContext('2d').putImageData(context.getImageData(face.x, face.y, face.width, face.height), 0, 0);
             faces.push(
                 $q(resolve => {
                     faceCanvas.toBlob((blob) => {
